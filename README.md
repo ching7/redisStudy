@@ -416,11 +416,11 @@ public static void main(String[] args) {
         jedis.srem("orders","jd002");
         System.out.println(jedis.smembers("orders").size());
         //hash
-        jedis.hset("hash1","userName","lisi");
+        jedis.hset("hash1","userName","chenyn");
         System.out.println(jedis.hget("hash1","userName"));
         Map<String,String> map = new HashMap<String,String>();
         map.put("telphone","13811814763");
-        map.put("address","atguigu");
+        map.put("address","chenyn");
         map.put("email","abc@163.com");
         jedis.hmset("hash2",map);
         List<String> result = jedis.hmget("hash2", "telphone","email");
